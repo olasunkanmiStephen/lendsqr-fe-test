@@ -10,16 +10,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.login-pag{
-  
-      .brand-title{
-        margin-top: 40px;
-        margin-left: 40px;
-      }
+.login-pag {
+  .brand-title {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+
   .login-page {
     display: flex;
     height: 100vh;
-  
+
     &__left {
       flex: 1;
       background-color: #ffffff;
@@ -28,26 +28,35 @@ body {
       align-items: center;
       justify-content: center;
       position: relative;
-  
-      .brand-title{
+
+      .brand-title {
         position: absolute;
         top: 60px;
         left: 40px;
       }
-  
+
       img {
         max-width: 80%;
         height: auto;
       }
     }
-  
+
     &__right {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       background-color: #fff;
-      // box-shadow: 0 0 2px 0.3px rgb(226, 226, 226);
+      box-shadow: 0 5px 5px 0.2px rgb(204, 203, 203);    }
+  }
+}
+
+@media (max-width: 800px) {
+  .login-pag{
+    .login-page{
+      .login-page__left {
+        display: none;
+      }
     }
   }
 }
