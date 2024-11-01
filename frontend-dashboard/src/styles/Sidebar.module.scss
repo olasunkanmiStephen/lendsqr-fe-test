@@ -1,0 +1,56 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 250px; 
+  transition: width 0.3s ease;
+  background-color: #fff;
+  overflow-y: scroll;
+  position: fixed;
+  top: 10%;
+
+  &.closed {
+    width: 80px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      cursor: pointer;
+
+      p {
+        margin: 0;
+      }
+
+      span {
+        margin-left: 10px;
+        display: inline-block;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+  
+    .sectionTitle {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .indent {
+      padding-left: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80px;
+
+    ul li span {
+      display: none; 
+    }
+  }
+}
